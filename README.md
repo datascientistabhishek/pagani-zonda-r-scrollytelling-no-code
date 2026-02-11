@@ -1,5 +1,5 @@
 # Pagani Zonda R Scrollytelling Showcase
-Demo Link of deployed project -> https://flourishing-cajeta-1ebaa0.netlify.app/ ```
+**Demo Link of deployed project** -> https://flourishing-cajeta-1ebaa0.netlify.app/ ```
 A premium, interactive web experience showcasing the legendary Pagani Zonda R. This project features a high-performance **scrollytelling** mechanic where a 3D car rotation is synchronized with the user's scroll depth, accompanied by a dynamic HUD overlay.
 
 ## 🏎️ Features
