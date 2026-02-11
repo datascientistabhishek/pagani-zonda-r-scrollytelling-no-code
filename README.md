@@ -2,9 +2,6 @@
 Demo Link of deployed project -> https://flourishing-cajeta-1ebaa0.netlify.app/ ```
 A premium, interactive web experience showcasing the legendary Pagani Zonda R. This project features a high-performance **scrollytelling** mechanic where a 3D car rotation is synchronized with the user's scroll depth, accompanied by a dynamic HUD overlay.
 
-![Pagani Showcase Preview](https://github.com/datascientistabhishek/pagani-zonda-r-scrollytelling-no-code/assets/placeholder-image-if-available)
-*(Note: You can add a screenshot here)*
-
 ## 🏎️ Features
 
 -   **Scroll-Controlled Animation**: Frame-by-frame image sequence rendering using HTML5 Canvas for maximum performance.
