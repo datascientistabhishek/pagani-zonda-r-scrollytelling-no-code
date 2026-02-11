@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pagani Zonda R Scrollytelling Showcase
 
-## Getting Started
+A premium, interactive web experience showcasing the legendary Pagani Zonda R. This project features a high-performance **scrollytelling** mechanic where a 3D car rotation is synchronized with the user's scroll depth, accompanied by a dynamic HUD overlay.
 
-First, run the development server:
+![Pagani Showcase Preview](https://github.com/datascientistabhishek/pagani-zonda-r-scrollytelling-no-code/assets/placeholder-image-if-available)
+*(Note: You can add a screenshot here)*
+
+## 🏎️ Features
+
+-   **Scroll-Controlled Animation**: Frame-by-frame image sequence rendering using HTML5 Canvas for maximum performance.
+-   **Synchronized HUD**: Text and UI elements transition seamlessly (Hero -> Design -> Engine) based on scroll progress.
+-   **Premium Aesthetics**: Custom "Pagani" theme using Tailwind v4, Orbitron/Rajdhani fonts, and glassmorphism.
+-   **Responsive Design**: Optimized for different screen sizes with high-DPI (Retina) support.
+-   **Static Export**: Pre-configured for easy deployment to Netlify or Vercel.
+
+## 🛠️ Tech Stack
+
+-   **Framework**: [Next.js 14+](https://nextjs.org/) (App Router, TypeScript)
+-   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (using `@theme` variables)
+-   **Animation**: [Framer Motion](https://www.framer.com/motion/) (useScroll, useTransform)
+-   **Rendering**: HTML5 Canvas + `clsx` / `tailwind-merge`
+
+## 🚀 Getting Started
+
+### Prerequisites
+-   Node.js 18+ installed
+
+### Installation
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/datascientistabhishek/pagani-zonda-r-scrollytelling-no-code.git
+    cd pagani-zonda-r-scrollytelling-no-code/pagani
+    ```
+
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3.  Run the development server:
+    ```bash
+    npm run dev
+    ```
+
+4.  Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pagani/
+├── app/
+│   ├── globals.css       # Tailwind v4 theme & global styles
+│   ├── layout.tsx        # Font configuration (Orbitron & Rajdhani)
+│   └── page.tsx          # Master Scroll Orchestrator (600vh height)
+├── components/
+│   ├── Navbar.tsx        # Fixed glassmorphism navigation
+│   ├── ZondaScrollCanvas.tsx # The core canvas component handling the image sequence
+│   └── ZondaExperience.tsx   # The HUD overlay managing text transitions
+├── data/
+│   └── carData.ts        # Static content for key features
+└── public/
+    └── images/zonda-sequence/ # 181 frames of the car rotation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Netlify (Static Export)
+1.  Run the build command to generate a static `out` folder:
+    ```bash
+    npm run build
+    ```
+2.  Drag and drop the `out` folder to [Netlify Drop](https://app.netlify.com/drop).
+3.  **Alternative (CLI)**:
+    ```bash
+    npx netlify-cli deploy --prod --dir=out
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Vercel
+1.  Install Vercel CLI: `npm i -g vercel`
+2.  Run `vercel deploy` from the project root.
 
-## Learn More
+## 🎨 Credits
 
-To learn more about Next.js, take a look at the following resources:
+-   **Design Inspiration**: Awwwards scrollytelling sites & Pagani Automobili branding.
+-   **Fonts**: Orbitron & Rajdhani (Google Fonts).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Built with ❤️ for speed enthusiasts.*
